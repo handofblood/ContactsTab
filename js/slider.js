@@ -7,7 +7,7 @@ $('.multiple-items').slick({
     nextArrow: "<img src=\"img/nextArr.svg\" alt=\"\" class='next'  >",
     responsive: [
         {
-            breakpoint: 1230,
+            breakpoint: 1235,
             settings: {
                 slidesToShow: 7,
                 slidesToScroll: 1,
@@ -22,7 +22,14 @@ $('.multiple-items').slick({
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 750,
+            settings: {
+                slidesToShow: 4,
+                arrows: false
+            }
+        },
+        {
+            breakpoint: 481,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,

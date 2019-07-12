@@ -1,20 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Assistant:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body{
    margin: 0;
    padding: 0;
  }
 .contacts{
+  margin: 0 auto;
+  width: 100%;
 .navbar{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 12px;
-  @media screen and(max-width:600px) {
+  padding-top: 12px;
+  @media screen and(max-width:680px) {
     flex-direction: column-reverse;
     justify-content: center;
+  }
+  @media screen and (max-width: 480px){
+    background: linear-gradient(90deg, #F97B4A 0%, #C6278D 54.18%, #4200FF 95.31%);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
   }
   .navbar_buttons{
     @media screen and(max-width: 900px) {
@@ -22,12 +31,14 @@ body{
       flex-direction: column;
       align-items: center;
     }
-    @media screen and(max-width:600px) {
+    @media screen and(max-width:680px) {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
     }
-
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
 
    input{
      border: 0;
@@ -58,6 +69,9 @@ body{
       margin-left: 0;
         margin-top: 5px;
       }
+      @media screen and(max-width: 680px) {
+        margin-top: 0px;
+      }
       &:hover{
         color: white;
       }
@@ -68,32 +82,49 @@ body{
     @media screen and (max-width: 1000px) {
       margin-left: 17px;
     }
-    @media screen and(max-width: 640px) {
-      display: none;
-    }
+
   }
 }
 }
+
 .social{
   display: flex;
   flex-direction: row;
   a{
     img{
       margin-left: 18px;
-      width: 35px;
+
       height: 35px;
     }
   }
-
 }
+.mobiles{
+  display: none;
+  a{
+    img{
+      margin-left: 13px;
+      height: 16.64px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    display: block;
+    margin-left: -21px;
+  }
+}
+.desktop{
 
+  @media screen and(max-width: 680px) {
+    display: none;
+  }
+}
  .navbar_links{
    display: flex;
    flex-direction: row;
-   @media screen and(max-width:600px) {
+   @media screen and(max-width:680px) {
 
      justify-content: center;
    }
+
    .links{
      list-style: none;
      display: flex;
@@ -101,22 +132,37 @@ body{
      padding: 0;
      li{
        margin-left: 34px;
-       @media screen and(max-width:600px) {
+       @media screen and(max-width:680px) {
 
        margin-left:   18px;
        }
 
        a{
-         color: black;
+         font-family: Rubik;
+         font-style: normal;
+         font-weight: 500;
+         font-size: 18px;
+         line-height: 21px;
+         color: #4F4F4F;
          text-decoration: none;
          &:hover{
            text-decoration: underline;
          }
        }
      }
+     @media screen and (max-width: 480px) {
+       display: none;
+     }
    }
    .logo{
      margin-left: 20px;
+     @media screen and(max-width: 480px){
+       width: 54.33px;
+       height: 27.46px;
+       padding-bottom: 8px;
+       padding-top: 7px;
+       margin-right: 133px;
+     }
    }
  }
 
@@ -132,6 +178,14 @@ body{
   white-space: nowrap;
 div{
   overflow: hidden;
+  .marquee{
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #4F4F4F;
+  }
 }
 }
 
@@ -144,7 +198,8 @@ div{
   width: 100%;
 }
 .multiple-items{
-  width: 83%;
+  padding: 0 8% 0 8%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -198,16 +253,22 @@ div{
    justify-content: space-around;
    flex-wrap: wrap;
    .photo{
-     background-image: url(../img/fashionGirl.png);
-     background-size: cover;
-     width: 716px;
-     height: 848px;
-     @media screen and (max-width: 700px) {
-       -webkit-background-size: cover;
-       background-size: cover;
-       background-repeat: no-repeat;
+     //position: relative;
+     //width: 716px;
+     //height: 848px;
+     //display: block;
+     //overflow: hidden;
+     img{
+       object-fit: cover;
        width: 100%;
-       height: 500px;
+       //position: absolute;
+       //top: 0;
+       //left: 0;
+       //width: 100%;
+     }
+     @media screen and (max-width: 716px) {
+       //width: 100%;
+       //height: auto;
      }
    }
    .contactForm{
@@ -217,10 +278,10 @@ div{
        font-style: normal;
        font-weight: bold;
        font-size: 48px;
-
-
+       margin: 0;
+       color: #333333;
        text-align: right;
-       @media screen and (max-width: 600px) {
+       @media screen and (max-width: 690px) {
          text-align: center;
        }
      }
@@ -229,7 +290,7 @@ div{
        display: flex;
        flex-direction: row;
        justify-content: left;
-       @media screen and (max-width: 600px) {
+       @media screen and (max-width: 690px) {
          flex-direction: column;
          align-items: center;
        }
@@ -240,7 +301,14 @@ div{
          align-content: center;
            margin-left: 10px;
          margin-top: 13px;
-
+            span{
+              font-family: Roboto;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 21px;
+              color: #333333;
+            }
             svg{
               margin-left: 17px;
             }
@@ -263,6 +331,8 @@ div{
          font-weight: bold;
          font-size: 48px;
          text-align: right;
+         color: #333333;
+         margin-top: 24px;
          @media screen and (max-width:470px) {
            text-align: center;
          }
@@ -280,6 +350,7 @@ div{
          font-weight: normal;
          font-size: 24px;
          line-height: 28px;
+         padding: 20px;
          @media screen and (max-width:470px) {
           width: 80%;
          }
@@ -294,15 +365,17 @@ div{
          font-family: Arial;
          font-size: 34px;
          line-height: 39px;
+         color: white;
          @media screen and (max-width:470px) {
            margin-left:  0;
            margin-top: 10px;
          }
          &:hover{
-           color: white;
+           color: black;
          }
        }
        textarea{
+         padding: 20px;
          margin-top: 17px;
          direction: rtl;
          border: 1px solid #E0E0E0;
@@ -313,6 +386,9 @@ div{
          font-weight: normal;
          font-size: 24px;
          line-height: 28px;
+         resize:none;
+         height: 190px;
+         min-height:10px;
          @media screen and (max-width:470px) {
            width: 80%;
            height: 135px;
@@ -335,16 +411,23 @@ div{
     margin-top: 200px;
   }
   .footer_info{
-    margin-top: 33px;
-    @media screen and (max-width: 1000px) {
+    margin-top: 24px;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    color: #333333;
+    @media screen and (max-width: 1230px) {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
     }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 550px) {
       text-align: center;
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       align-items: center;
       flex-direction: column;
     }
@@ -352,7 +435,9 @@ div{
       position: absolute;
       left:45%;
       top: 27px;
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1230px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
         position: static;
 
       }
@@ -361,3 +446,25 @@ div{
 }
 
 ////////
+.mobile{
+  width: 28.84px;
+  height: 20px;
+  &:hover{
+    background-color: violet;
+    color: rebeccapurple;
+  }
+}
+.socialsM{
+  a{
+    img{
+      margin-left: 13px;
+    }
+  }
+}
+.outer-menu {
+  @media screen and (max-width: 480px) {
+    display: block;
+
+  }
+}
+input {outline:none;}

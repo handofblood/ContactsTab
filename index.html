@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,10 +20,16 @@
         </div>
 
         <div class="navbar_social social">
-            <a href=""><img src="img/inst.svg" alt=""></a>
-            <a href=""> <img src="img/facebook.svg" alt=""></a>
-            <a href=""><img src="img/youtube.svg" alt=""></a>
-
+            <div class="desktop">
+                <a href=""><img src="img/inst.svg" alt=""></a>
+                <a href=""> <img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/youtube.svg" alt=""></a>
+            </div>
+            <div class="mobiles">
+                <a href=""><img src="img/mobile%20menu/facebook.svg" alt=""></a>
+                <a href=""> <img src="img/mobile%20menu/instagram.svg " alt=""></a>
+                <a href=""><img src="img/mobile%20menu/youtube.svg" alt=""></a>
+            </div>
         </div>
 
         <div class="navbar_links">
@@ -32,9 +39,40 @@
                 <li><a href="#">תיב ףד</a></li>
             </ul>
             <img class="logo" src="img/logo.png" alt="logo">
+
+
         </div>
 
-</div>
+        <div class="outer-menu">
+            <input class="checkbox-toggle" type="checkbox" />
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div class="mobileMenuWrapper" style="display: flex;flex-direction: column;">
+
+                    <img src="img/mobile%20menu/facebookimage.png" alt="">
+                    <div>
+                        <ul>
+                            <li><a href="#"> תיבה ףד</a></li>
+                            <li><a href="#">תודוא</a></li>
+                            <li><a href="#">רשק רוצ</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar_buttons" style="display: block;">
+                        <input type="button" value="הסינכ" class="white">
+                        <input type="button" value="המשרה" class="yellowB">
+                    </div>
+                    <div class="socialsM">
+                        <a href=""><img src="img/mobile%20menu/insta.svg" alt=""></a>
+                        <a href=""> <img src="img/mobile%20menu/faceB.svg" alt=""></a>
+                        <a href=""><img src="img/mobile%20menu/youT.svg" alt=""></a>
+                        <a href=""><img src="img/mobile%20menu/telegramm.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="wrapper"   >
         <div class="multiple-items"    >
@@ -70,7 +108,7 @@
 
     <div class="content">
         <div class="photo">
-
+            <img src="img/fashionGirl.png" alt="">
         </div>
         <div class="contactForm">
             <h3>רשק רוצ</h3>
@@ -132,7 +170,7 @@
 
                 </div>
             </div>
-            <hr>
+            <hr style="margin-top: 37px;">
             <form>
                 <h3>Send us a message!</h3>
                 <input type="text" placeholder="  Name  ">

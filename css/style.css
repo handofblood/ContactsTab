@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Assistant:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +9,14 @@ body {
 
 .contacts {
   margin: 0 auto;
-  width: 100%;
+  padding: 0 24px;
+  max-width: 1444px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 480px) {
+  .contacts {
+    padding: 0 12px 0 12px;
+  }
 }
 .contacts .navbar {
   display: flex;
@@ -29,6 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 0;
+    margin: 0px -24px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -43,6 +52,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding-top: 10px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -51,7 +61,7 @@ body {
   }
 }
 .contacts .navbar .navbar_buttons input {
-  border: 0;
+  border: none;
   border-radius: 5px;
   outline: none;
   font-family: Rubik;
@@ -73,8 +83,11 @@ body {
   color: yellow;
 }
 .contacts .navbar .navbar_buttons .redB {
+  border: none;
+  outline: none;
   margin-left: 15px;
   background: #EB5757;
+  color: white;
 }
 @media screen and (max-width: 900px) {
   .contacts .navbar .navbar_buttons .redB {
@@ -88,7 +101,7 @@ body {
   }
 }
 .contacts .navbar .navbar_buttons .redB:hover {
-  color: white;
+  color: black;
 }
 .contacts .navbar .social {
   margin-left: 12%;
@@ -119,10 +132,11 @@ body {
   .mobiles {
     display: block;
     margin-left: -21px;
+    padding-left: 10px;
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 750px) {
   .desktop {
     display: none;
   }
@@ -220,6 +234,8 @@ body {
 }
 
 .slider_element {
+  border: none;
+  outline: none;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -354,15 +370,15 @@ body {
   }
 }
 .content .contactForm form input[type=button] {
-  width: 40%;
-  height: 79px;
+  width: unset;
+  height: unset;
+  display: block;
   background: linear-gradient(294.72deg, #D3A01D 1.57%, #F2C94C 98.82%);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin-left: 60%;
   font-family: Arial;
   font-size: 34px;
-  line-height: 39px;
   color: white;
 }
 @media screen and (max-width: 470px) {
@@ -375,6 +391,7 @@ body {
   color: black;
 }
 .content .contactForm form textarea {
+  outline: none;
   padding: 20px;
   margin-top: 17px;
   direction: rtl;
@@ -401,17 +418,17 @@ body {
   margin: 0 auto;
   width: 90%;
   position: relative;
-  margin-top: 467px;
+  margin-top: 200px;
   height: 100px;
 }
 @media screen and (max-width: 1230px) {
   .footer {
-    margin-top: 300px;
+    margin-top: 100px;
   }
 }
 @media screen and (max-width: 700px) {
   .footer {
-    margin-top: 200px;
+    margin-top: 50px;
   }
 }
 .footer .footer_info {
